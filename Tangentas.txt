@@ -1,0 +1,60 @@
+package Skaiciuoklis;
+
+import java.util.Scanner;
+
+public class Tangentas {
+	public static void main(String[] args) {
+		Scanner NumInput = new Scanner(System.in);
+		double firstNum = 0;
+		double secondNum = 0;
+		double result = 0;
+		System.out.println("Enter first number: ");
+		firstNum = NumInput.nextDouble();
+		System.out.println("Enter operator: ");
+		String amalgar = NumInput.next();
+		if (amalgar == "sin" || amalgar == "cos" || amalgar == "tan" || amalgar == "cot") {
+			switch (amalgar) {
+			case "sin":
+				result = Math.toRadians(Math.sin(firstNum));
+				break;
+			case "cos":
+				result = Math.toRadians(Math.cos(firstNum));
+				break;
+			case "tan":
+				result = Math.toRadians(Math.tan(firstNum));
+				break;
+			case "cot":
+				result = (Math.toRadians(Math.cos(firstNum)) / Math.toRadians(Math.sin(firstNum)));
+				break;
+
+			default:
+				break;
+
+			}
+			System.out.println(Math.toRadians(result));
+		} else
+
+			System.out.println("Enter second number: ");
+		secondNum = NumInput.nextDouble();
+		switch (amalgar) {
+		case "+":
+			result = firstNum + secondNum;
+			break;
+		case "-":
+			result = firstNum - secondNum;
+			break;
+		case "*":
+			result = firstNum * secondNum;
+			break;
+		case "/":
+			result = firstNum / secondNum;
+			break;
+
+		default:
+			System.out.println("Illegal Operation");
+		}
+
+		System.out.println(result);
+
+	}
+}
