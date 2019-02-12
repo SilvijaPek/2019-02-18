@@ -1,0 +1,29 @@
+package Skaiciuoklis;
+
+import java.util.Scanner;
+
+public class SakniesTraukimas {
+	public static void main(String []args) {
+	double number, t, squareRoot;
+	System.out.println("Iveskite numeri: ");
+    Scanner input = new Scanner(System.in);
+    number = input.nextDouble();
+    squareRoot = number / 2;
+    do
+    {
+        t = squareRoot;
+        squareRoot = (t + (number / t)) / 2;
+    }
+    while ((t - squareRoot) != 0);
+    System.out.println("Kvadratine saknis: ");
+    System.out.println(squareRoot);
+    System.out.println("Kvadratine saknis: ");
+    System.out.println(Math.pow(number, 2));
+    int num3;
+    System.out.println("Kokiu laipsniu kelti?");
+    Scanner number3 = new Scanner(System.in);
+    num3 = number3.nextInt();
+    System.out.println(Math.pow(number, num3));
+    
+}
+}
